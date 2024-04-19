@@ -2,8 +2,35 @@
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    padding: 100px;
+    margin-bottom: 100px;
+    border: solid 1px #ff8400;
+    background-color: #ff6a00;
   }
+
+  p{
+    font-family: "Arial', Arial, serif";
+    text-indent: 20 px;
+    margin-left: 15 px;
+  }
+    
+  h1{
+    color: black;
+    font-family: "Arial";
+    font-size: 100%;
+  }
+   
+  #content {
+    background-color: #fb012f; 
+    width: 800 px;
+    min-height: 800 px;
+    padding: 50px;
+    margin: 10px;
+    border: solid 1px;
+    font-size: 20px;
+  }
+    
+  
+
+    
+    
