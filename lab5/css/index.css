@@ -4,15 +4,26 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
+    border: solid 10px #130000;
     background-color: #20b5f5;
   }
 
   #content {
-  background-color: rgb(225, 210, 11);
+  background-color: rgb(9, 236, 240);
   }
 
   .minor-section h2{
    font-family:  Georgia, Times, 'Times New Roman' ;
    font-size: medium;
   }
+
+.route 18{
+    height: 400;
+    width: 400;
+    position: absolute;
+    right: 60 px;
+    bottom: 0px;
+    top: 20px;
+}
+
+

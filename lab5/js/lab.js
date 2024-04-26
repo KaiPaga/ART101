@@ -1,8 +1,25 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+/*
+* Aruthor: Kai Pagan <kkpagan@ucsc.edu>
+* Created: 25 April
+* License: Public Domain
+*/
 
-// Constants
+
+// Define variables 
+make = "Santa Cruz Metro Buses";
+model = "Route 18";
+color = "White with Black Windows";
+year = "2023";
+
+// calculate
+age = 2023 - year;
+
+// output 
+document.writeln("Make: " + make + "<br>") ; 
+document.writeln("Model: " + model + "<br>") ;
+document.writeln("Color: " + color + "<br>") ;
+document.writeln("Year: " + year + "<br>") ;
+document.writeln("Age: " + age + " years<br>") ;
 
 // Functions
 
