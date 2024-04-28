@@ -4,6 +4,31 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    border: solid 1px #000000;
+    background-color: #fb1707;
   }
+
+  p{
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+  }
+
+  body{
+    color: #cbd111;
+    font-style: italic;
+  }
+
+  p{
+    color: #1295af;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  {
+    
+  }
+
+#content{
+  background-color: #294591;
+  }
+  
+
