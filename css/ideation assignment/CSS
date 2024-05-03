@@ -13,18 +13,17 @@
   }
 
   body{
-    color: #cbd111;
+    color: #27ff01;
     font-style: italic;
   }
 
   p{
-    color: #1295af;
+    color: #f700f2;
     font-style: normal;
     font-weight: 400;
   }
 
 #content{
-  background-color: #294591;
+  background-color: #0becf0;
   }
   
-
