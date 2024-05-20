@@ -1,0 +1,48 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+.minor section {
+    padding: 50px;
+    margin-bottom: 10px;
+    border: solid 1px #0105f3;
+    background-color: #0206f2;
+  }
+
+  p{
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+  }
+
+  .special {
+    background-color: #f05806;
+    border: dotted 50px rgba(154, 179, 18, 0.979);
+    color: rgb(2, 130, 199);
+    font-weight: bold;
+  }
+
+  p{
+    color: #08ecf8;
+    font-style: italic;
+    font-weight: 70;
+  }
+
+#content{
+  background-color: #9518e8;
+  }
+  .text p {
+    display: inline-block;
+    max-width: 60%;
+    margin: 3px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgb(200, 27, 27);
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.8em;
+  }
+
+  body{
+    color: #0123ff;
+    font-style: italic;
+  }
+
+  
