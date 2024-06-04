@@ -3,9 +3,9 @@
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor section {
     padding: 10px;
+    padding-top: 20 px;
     margin-bottom: 10px;
-    border: solid 1px #000000;
-    background-color: #0206f2;
+    background-color: #7072dd;
   }
 
   p{
@@ -13,28 +13,37 @@
   }
 
   p{
-    color: #10f36b;
-    font-style: italic;
+    color: #fd0909;
+    font-style: normal;
+    font-weight: 70;
+    padding: 10px;
   }
 
 #content{
-  background-color: #a700d1;
+  background-color: #f58d06;
+  padding-bottom: 20px;
   }
 
+  body{
+    color: #5f53cd;
+    font-style: italic;
+  }
   h1{
     padding-top: 50px;
     padding: 30px;
     border-color: rgb(0, 0, 0);  
     border-width: .10em;  
-    border-style: solid; 
+    border-style: solid;
+    border-spacing: 20px 50px; 
   }
-
+  
   h2{
     border-color: rgb(0, 0, 0);  
     border-width: .10em;  
     border-style: solid; 
     padding: 10px;
     font-size: 25px;
+    border-spacing: 20px 50px;
   }
 
   h3{
@@ -45,6 +54,7 @@
     font-size: 25px; 
   }
 
+  
   h4{
     border-color: rgb(0, 0, 0);  
     border-width: .10em;  
@@ -52,3 +62,20 @@
     padding: 10px;
     font-size: 25px;
   }
+
+.button {
+    background-color: rgb(23, 204, 174);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+
+.button1 {border-radius: 12px;}
+.button2 {border-radius: 12px;}
+.button3 {border-radius: 12px;}
+.button4 {border-radius: 12px;}

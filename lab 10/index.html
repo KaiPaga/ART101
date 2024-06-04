@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Lab 10:JavaScript Events and Forms</title>
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text javascript" src="js.lab.js" DEFER></script>
+    <link rel="stylesheet" type="text/css" href="css.lab.css">
+
+    </head>
+    <style>
+      body {
+          background-color:rgb(59, 110, 168);
+      }
+  </style>
+    <body>
+        <!-- Style this page by changing the CSS in  ../css/site.css or css/lab.css -->
+        <main id="content">
+          <section>
+            <h1> Lab 10: JavaScript Events and Forms <h/1>
+              <div>
+                <div class="minor-section"></div>
+                        <h2>Challenge
+                         <p>The challenge of this lab was creating a new button in our output div's and a helper fucntion that when fucntioning properly
+                          produces fake latin.</p>
+                          </h2>
+                 </div>
+
+                 <div class="minor-section"></div>
+                        <h3>Problem
+					              <p>The problems we ran into while completing lab 9 were attaching an event listener to our button through and coding the javascript 
+                          correctly.</p> 
+                          </h3>
+			           </div>
+
+		          <div class="minor-section"></div>
+                    <h4>Results
+					            <p>The results are an re-editted, lab 9 webpage that includes a fucntional, "Say Something" button 
+                       when clicked on produces fake latin.</p>
+                      </h4>
+                    </div>
+
+                      <button id="make-convo">Say Something</button>
+                      <div id="output"></div>
+                      
+                      <script>
+                        $(document).ready(function() {
+                            // Function to generate random Latin text
+                            function generateRandomLatinText() {
+                                const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+                                const min = 3;
+                                const max = 100;
+                                const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
+                                const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+                                return text.slice(randStart, randStart + randLen);
+                            }
+                        
+                            // Click listener for the button
+                            $("#make-convo").click(function() {
+                                const newText = generateRandomLatinText();
+                                $("#output").append('<div class="text"><p>' + newText + '</p></div>');
+                            });
+                        });
+                        </script>
+                        
+    </html>

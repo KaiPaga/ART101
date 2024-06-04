@@ -6,23 +6,22 @@
    Author: Kai Pagan
    Date: May 12, 2024
    */
-
-   
+  
+ 
    // add button to challenge section
-   $("#challenge").append("<button id='button-challenge'>Make Special</button>");
+ $("#challenge").append("<button id='button-challenge'>listener</button>")
 
-   // add a click listener to the challenge button
-   $("button-challenge").click(function(){
-       // now add (or subtract) the "special" class to the section
-       $("#challenge").toggleClass("special");
-   });
+ // add a click listener to the challenge button
+$("button-challenge").click(function(){
+    // now add (or subtract) the "special" class to the section
+    $("#challenge").toggleClass("special");
+});
 
-   // add button to challenge section
-   $("#problem").append("<button id='button-problem'>Make Special</button>");
+  // add button to problem section
+  $("#problem").append("<button id='button-problem'>listener</button>")
 
-   // add a click listener to the challenge button
-   $("button-problem").click(function(){
-       // now add (or subtract) the "special" class to the section
-       $("#problem").toggleClass("special");
-   });
-
+  // add a click listener to the problem button
+ $("button-problem").click(function(){
+     // now add (or subtract) the "special" class to the section
+     $("#problem").toggleClass("special");
+ });

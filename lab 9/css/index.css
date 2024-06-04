@@ -12,22 +12,28 @@
     font-family:'Segoe UI', Tahoma, Verdana, sans-serif
   }
 
+  .special {
+    background-color: #c80606;
+    border: dotted;
+    color: rgb(199, 2, 196);
+    font-weight: bold;
+  }
+
   p{
-    color: #10f36b;
-    font-style: italic;
+    color: #d7da07;
+    font-style: normal;
+    font-weight: 70;
   }
 
 #content{
-  background-color: #a700d1;
+  background-color: #0a7d3c;
   }
 
-  h1{
-    padding-top: 50px;
-    padding: 30px;
-    border-color: rgb(0, 0, 0);  
-    border-width: .10em;  
-    border-style: solid; 
+  body{
+    color: #0497b1;
+    font-style: italic;
   }
+
 
   h2{
     border-color: rgb(0, 0, 0);  

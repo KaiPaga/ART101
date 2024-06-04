@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Use UTF character set, a good idea with any webpage -->
+  	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Include a sitewide CSS file for consistent styling across the site -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<!-- Lab-specific CSS file for any special styling of this particular page -->
+	<link rel="stylesheet" type="text/css" href="css/lab.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="./js/lab.js" defer></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+	<main id="content">
+		<section>
+			<h1>Lab 15: AJAX</h1>
+			<div class="minor-section">
+					<h2>Challenge
+					<p>The challeneg of the current lab was to experiemnt with jQuery and AJAX but more
+                        speciffically to do so by testing out an API endpoint and then to gather info. 
+                        from an external soruce, through AJAX.</p>
+                     </h2>
+			</div>
+
+			<div class="minor-section">
+					<h3>Problems
+					<p>The problems that I came across while testing out an API for the first time, while
+                       using anjQuery AJAX call to retrieve output from the forutune cookie API msyelf and 
+                       my project partner decided to utilize for the assignment, were adding the API's 
+                       into our HTML correctly and the corresponding javascript code. For the corresponding
+                       JavaScript code, we intially had a hard time programming our "Get Fortune" button to
+                       generate responses that look/sound like real fortunes. Thus, after truble-shooting for 
+                       a few hours, researching different methods in reference to using API's in HTML coding 
+                       and what was then the correct Javascript code that matched our HTML code, and 
+                       brainstorming together for another hour or so, we finally figured out a way to resolve
+                       the issue and make the code work.</p>
+                    </h3>
+			</div>
+
+			<div class="minor-section">
+					<h4>Results
+                    <p>The results of this were completing a API test and using a variation of an jQuery .ajax 
+                        recipe to create a sub-section on the bottom of my webpage, that within users are able    
+                        to choose from one of four following categories, "General, "Love", "Career", "Health",
+                        and recieve a personalized "fortune" in accordance to whichever category they selected.
+                        homepage.</p>
+                        </h4>
+            </div>
+            <div>
+            <h5>Output
+               <p id="fortune-output">Get Your Fortune Read</p>
+               </h5>
+            </div>
+        </section> <!-- Add closing tag for section -->
+    </main> <!-- Add closing tag for main -->
+
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookies</title>
+</head>
+<body>
+    <h1>Get Your Fortune Cookie</h1>
+    <p>Select a category:</p>
+    <select id="categorySelect">
+        <option value="general">General</option>
+        <option value="love">Love</option>
+        <option value="career">Career</option>
+        <option value="health">Health</option>
+    </select>
+    <button onclick="getFortune()">Get Fortune</button>
+    <div id="fortuneDisplay"></div>
+
+    <script>
+        const fortunes = {
+            general: [
+                "A friend’s frown is better than a fool’s smile.",
+                "A good friendship is often more important than a passionate romance.",
+                "A good time to finish up old tasks."
+            ],
+            love: [
+                "A kiss makes the heart young again and wipes out the years.",
+                "A lifetime of happiness lies ahead of you.",
+                "Accept something that you cannot change, and you will feel better."
+            ],
+            career: [
+                "A light heart carries you through all the hard times.",
+                "A person of words and not deeds is like a garden full of weeds.",
+                "A pleasant surprise is waiting for you."
+            ],
+            health: [
+                "A quiet evening with friends is the best tonic for a long day.",
+                "A single kind word will keep one warm for years.",
+                "A smile is your passport into the hearts of others."
+            ]
+        };
+
+        function getFortune() {
+            const category = document.getElementById("categorySelect").value;
+            const fortuneList = fortunes[category];
+            if (!fortuneList) {
+                document.getElementById("fortuneDisplay").textContent = "Invalid category";
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * fortuneList.length);
+            const fortune = fortuneList[randomIndex];
+            document.getElementById("fortuneDisplay").textContent = fortune;
+        }
+    </script>
+</body>
+</html>

@@ -13,12 +13,18 @@
   }
 
   p{
-    color: #10f36b;
-    font-style: italic;
+    color: #d7da07;
+    font-style: normal;
+    font-weight: 70;
   }
 
 #content{
-  background-color: #a700d1;
+  background-color: #0a7d3c;
+  }
+
+  body{
+    color: #0497b1;
+    font-style: italic;
   }
 
   h1{
