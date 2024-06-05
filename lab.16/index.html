@@ -50,30 +50,60 @@
 </html>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/lab.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XKCD Viewer</title>
 </head>
 <body>
-<p style="text-align: center;">How Americans Do War?</p>
-<p style="text-align: center;">An Excluisve Look onto the Battle Fields and Blood-Stained Past of America</p> 
-    <a href="https://libraries.uta.edu/ettahulme/browse/topics/war?searchtopic%5B0%5D=format%3APolitical%20cartoon">
-    <button class="button button1">War and Cartoons</button>
-    </a>
 
-    <a href="https://www.youtube.com/@newyorkstatemilitarymuseum6253/videos">
-    <button class="button button2">600+ Veteran Interviews</button>
-    </a>
+<h1>XKCD Comic Viewer</h1>
 
-    <a href="https://stacker.com/movies/50-best-war-documentaries-all-time">
-    <button class="button button3">The Top 50 War Documentaries</button>
-    </a>
+<div id="comicContainer">
+  <p>Loading comic...</p>
+</div>
 
-    <a href="https://www.nytimes.com/spotlight/atwar">
-    <button class="button button4">New's Articles and More</button>
-    </a>
+<script>
+// Function to fetch and display XKCD comic
+function fetchComic() {
+  // Define the XKCD API endpoint
+  const xkcdUrl = "https://xkcd.com/info.0.json";
+
+  // Make a GET request to the XKCD API
+  fetch(xkcdUrl)
+    .then(response => {
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error('Failed to retrieve XKCD comic.');
+      }
+      // Parse the JSON response
+      return response.json();
+    })
+    .then(comicData => {
+      // Extract relevant information
+      const comicNumber = comicData.num;
+      const comicTitle = comicData.title;
+      const comicImgUrl = comicData.img;
+      const altText = comicData.alt;
+
+      // Update the HTML content with comic information
+      const comicContainer = document.getElementById("comicContainer");
+      comicContainer.innerHTML = `
+        <h2>${comicTitle}</h2>
+        <img src="${comicImgUrl}" alt="${altText}">
+        <p>Comic Number: ${comicNumber}</p>
+        <p>Alt Text: ${altText}</p>
+      `;
+    })
+    .catch(error => {
+      console.error(error.message);
+    });
+}
+
+// Call fetchComic function when the page loads
+fetchComic();
+</script>
 
 </body>
 </html>
